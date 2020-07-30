@@ -1,0 +1,163 @@
+<div class="hero-wrap hero-bread" style="background-image: url('assets/images/bg_1.jpg');">
+    <div class="container">
+      <div class="row  slider-text align-items-center justify-content-center">
+        <div class="col-md-9  text-center">
+            <p class="breadcrumbs"><span class="mr-2"><a routerLink="/">Home</a></span> <span>Products</span></p>
+          <h1 class="mb-0 bread">Products</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div></div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 mb-5 text-center">
+                <ul class="product-category">
+                    <li><a href="#" class="active">All</a></li>
+                    <!-- <li><a href="#">Vegetables</a></li>
+                    <li><a href="#">Fruits</a></li>
+                    <li><a href="#">Juice</a></li>
+                    <li><a href="#">Dried</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- {{# each products}}
+        Product!
+        {{ /each }} -->
+        
+    <div   class="row">
+        <div  class="col-md-6 col-lg-3" *ngFor='let product of products'>
+            <div class="product" >
+                
+                <a href="#" class="img-prod"><img  [src] =  'product.imageUrl' [style.width.px] = 'imageWidth'
+                    [style.margin.px] = 'imageMargin'></a>
+                <div class="text py-3 pb-4 px-3 text-center">               
+                <h3> <a router link="/cart">{{product.title}} </a></h3>
+                <div class="d-flex">
+                    <div class="pricing">
+                        <p class="price"><span>₹{{product.price}}</span></p>
+                    </div>
+                </div> 
+                <div>
+                    <p><span>Quantity: {{product.quantity}}</span></p>
+                </div>
+                <!-- <button class="btn btn-success" (click)="addtocart(product._id)">add to cart</button> -->
+                <button class="btn btn-success" (click)="tocart(product)">Add to cart</button>
+                
+                <!-- <div class="bottom-area d-flex px-3">
+                    <div class="m-auto d-flex"> -->
+                        <!-- <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                            <span><i class="ion-ios-menu"></i></span>
+                        </a> -->
+                        <!-- <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                            <span><i class="ion-ios-cart"></i></span>
+                        </a> -->
+
+                        <!-- <a href="#" class="heart d-flex justify-content-center align-items-center ">
+                            <span><i class="ion-ios-heart"></i></span>
+                        </a> -->
+                    <!-- </div>
+                </div> -->
+
+
+            </div>
+        </div>    
+    </div>
+
+
+    <!-- <div class="col-md-6 col-lg-3">
+        <div class="product">
+            <a href="#" class="img-prod"><img class="img-fluid" src="https://mk0nationaltodayijln.kinstacdn.com/wp-content/uploads/2019/02/national-strawberry-month-640x514.jpg" alt="Colorlib Template"></a>
+            <div class="text py-3 pb-4 px-3 text-center">               
+            <h3> <a router link="/cart">Strawberry</a></h3>
+            <div class="d-flex">
+                <div class="pricing">
+                                <p class="price"><span>₹120.00</span></p>
+                </div>
+            </div> 
+            
+            <div class="bottom-area d-flex px-3">
+                <div class="m-auto d-flex">
+                    <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                        <span><i class="ion-ios-menu"></i></span>
+                    </a>
+                    <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                        <span><i class="ion-ios-cart"></i></span>
+                    </a> -->
+                    <!-- <a href="#" class="heart d-flex justify-content-center align-items-center ">
+                        <span><i class="ion-ios-heart"></i></span>
+                    </a> -->
+                <!-- </div>
+            </div>
+
+        </div>
+    </div>    
+</div> -->
+
+
+<!-- <div class="col-md-6 col-lg-3">
+    <div class="product">
+        <a href="#" class="img-prod"><img class="img-fluid" src="https://www.arcgis.com/sharing/rest/content/items/1251fa3b219f481a87cdc2185bf5be9a/resources/1575517599631.jpeg?w=2400" alt="Colorlib Template"></a>
+        <div class="text py-3 pb-4 px-3 text-center">               
+        <h3> <a router link="/cart">Green beans</a></h3>
+        <div class="d-flex">
+            <div class="pricing">
+                            <p class="price"><span>₹120.00</span></p>
+            </div>
+        </div> 
+        
+        <div class="bottom-area d-flex px-3">
+            <div class="m-auto d-flex">
+                <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                    <span><i class="ion-ios-menu"></i></span>
+                </a>
+                <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                    <span><i class="ion-ios-cart"></i></span>
+                </a> -->
+                <!-- <a href="#" class="heart d-flex justify-content-center align-items-center ">
+                    <span><i class="ion-ios-heart"></i></span>
+                </a> -->
+            <!-- </div>
+        </div>
+
+    </div>
+</div>    
+</div> -->
+
+<!-- <div class="col-md-6 col-lg-3">
+    <div class="product">
+        <a href="#" class="img-prod"><img class="img-fluid" src="https://www.health.harvard.edu/media/content/images/p_7_RedCabbage_H1805_gi185088185.jpg" alt="Colorlib Template"></a>
+        <div class="text py-3 pb-4 px-3 text-center">               
+        <h3> <a router link="/cart">Cabbage</a></h3>
+        <div class="d-flex">
+            <div class="pricing">
+                            <p class="price"><span>₹120.00</span></p>
+            </div>
+        </div> 
+        
+        <div class="bottom-area d-flex px-3">
+            <div class="m-auto d-flex">
+                <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                    <span><i class="ion-ios-menu"></i></span>
+                </a>
+                <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                    <span><i class="ion-ios-cart"></i></span>
+                </a> -->
+                <!-- <a href="#" class="heart d-flex justify-content-center align-items-center ">
+                    <span><i class="ion-ios-heart"></i></span>
+                </a> -->
+            <!-- </div>
+        </div>
+
+    </div>
+</div>    
+</div> -->
+
+
+
+</div>
+       

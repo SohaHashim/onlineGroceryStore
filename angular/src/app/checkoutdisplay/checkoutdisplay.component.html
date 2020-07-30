@@ -1,0 +1,125 @@
+<section class="ftco-section ftco-cart">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 ">
+          <div class="cart-list">
+            <table class="table">
+              <thead class="thead-primary">
+                <tr class="text-center">
+                  <!-- <th>&nbsp;</th> -->
+                  <!-- <th>&nbsp;</th> -->
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Address</th>
+                  <th>City</th>
+                  <th>Postcode</th>
+                  <th>Phone</th>
+
+                  <!-- <th>Total</th>  -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center" *ngFor='let checkout of checkouts'>
+                  <!-- <td class="product-remove"><a routerLink="/cart"><span class="ion-ios-close" (click)="deleteProduct(product._id)"></span></a></td> -->
+                  
+                  <!-- <td class="image-prod"><div class="img" style="background-image:url(assets/images/product-3.jpg);"></div></td> -->
+                  
+                  <td >
+                    {{checkout.fname}}
+                  </td>
+                  <td>
+                    {{checkout.lname}}
+                  </td>
+                  <td >{{checkout.address}}</td>
+                 <td>{{checkout.city}}</td>
+                 <td>{{checkout.postcode}}</td>
+                 <td>{{checkout.phone}}</td>
+                </tr><!-- END TR-->
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+      </section>
+      <section class="ftco-section ftco-cart">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 ">
+              <div class="cart-list">
+                <table class="table">
+                  <thead class="thead-primary">
+                    <tr class="text-center">
+                      <!-- <th>Delete</th> -->
+                      <!-- <th>&nbsp;</th> -->
+                      <!-- <th>&nbsp;</th> -->
+                      <!-- <th>Edit</th> -->
+                      <th>Product name</th>
+                      <th>Quantity</th>
+                      <th>Price(₹)</th>
+                      <!-- <th>Total</th>  -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center" *ngFor='let product of products'>
+                      <!-- <td class="product-remove"><a routerLink="/cart"><span class="ion-ios-close" (click)="deleteProduct(product._id)"></span></a></td> -->
+                      <!-- <td>
+                        <button class="btn btn-block btn-danger " (click)="deleteProduct(product._id)">Delete</button>
+                      </td> -->
+                      <!-- <td class="image-prod"><div class="img" style="background-image:url(assets/images/product-3.jpg);"></div></td> -->
+                      <!-- <td>
+                        <button class="btn btn-block btn-success" (click)="onEdit(product._id)">Edit</button>
+                      </td> -->
+                      <td class="product-name">
+                        <h3>{{product.title}}</h3>
+                      </td>
+                      <td>
+                        <h6>{{product.quantity}}</h6>
+                      </td>
+                      <td class="price">{{product.quantity*product.price }}</td>
+                      <!-- <td class="quantity"> 1 </td> -->
+                      <!-- <td class="quantity">
+                        <div class="input-group mb-3">
+                           <input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+                        </div>
+                      </td> -->
+                      
+                      <!-- <td class="total">$4.90</td> -->
+                    </tr><!-- END TR-->
+      
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          </div>
+      
+          <div class="col-lg-4 mt-5 cart-wrap ">
+            <div class="cart-total mb-3">
+              <h3>Cart Total</h3>
+              <p class="d-flex">
+                <span>Subtotal</span>
+                <span>₹ {{this.total}}</span>
+              </p>
+              <p class="d-flex">
+                <span>Delivery</span>
+                <span>₹40.00</span>
+              </p>
+              <!-- <p class="d-flex">
+                <span>Discount</span>
+                <span>$3.00</span>
+              </p> -->
+              <hr>
+              <p class="d-flex total-price">
+                <span>Total</span>
+                <span>₹ {{total+40}}</span>
+              </p>
+            </div>
+            
+          </div>
+      
+      
+          </section>

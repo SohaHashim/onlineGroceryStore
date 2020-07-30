@@ -1,1 +1,1 @@
-"# onlineGroceryStore" 
+An online grocery store "INSTACART" which helps people to get grocery items to their homes by home delivery feature of the application. This feature is useful and helps to protect the health of every home during this pandemic.
